@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @RestController
@@ -44,12 +45,16 @@ public class ClientController {
     }
 
     @PostMapping
-    public ClientResponse createClient(@RequestBody final ClientRequest request) {
+    public ClientResponse createClient(
+            @Valid
+            @RequestBody final ClientRequest request
+    ) {
         return ClientMapper.toResponse(clientService.createClient(request));
     }
 
     @PutMapping("/{id}")
     public ClientResponse updateClient(
+            @Valid
             @PathVariable final Long id,
             @RequestBody final ClientRequest request
     ) {

@@ -8,6 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 import java.time.Instant;
 
 @Builder
@@ -17,9 +19,14 @@ import java.time.Instant;
 @AllArgsConstructor
 // @JsonNaming(PropertyNamingStrategy.SnakeCaseStrategy.class)
 public class ClientRequest {
+
     private String name;
+
     private String cpf;
+
     private Double income;
+
     private Instant birthDate;
+
     private Integer children;
 }
