@@ -4,6 +4,7 @@ import com.devsuperior.crud.domain.entity.Client;
 import com.devsuperior.crud.dto.request.ClientRequest;
 import com.devsuperior.crud.dto.response.ClientResponse;
 import lombok.NoArgsConstructor;
+import org.springframework.data.domain.Page;
 
 @NoArgsConstructor
 public class ClientMapper {
