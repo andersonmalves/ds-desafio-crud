@@ -5,7 +5,6 @@ import com.devsuperior.crud.dto.request.ClientRequest;
 import com.devsuperior.crud.dto.response.ClientResponse;
 import com.devsuperior.crud.service.ClientService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
@@ -21,7 +20,6 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/clients")
