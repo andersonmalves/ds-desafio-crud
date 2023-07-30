@@ -5,6 +5,7 @@ import com.devsuperior.crud.dto.request.ClientRequest;
 import com.devsuperior.crud.dto.response.ClientResponse;
 import com.devsuperior.crud.service.ClientService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
@@ -29,7 +30,7 @@ public class ClientController {
     private final ClientService clientService;
 
     @GetMapping
-    public List<ClientResponse> gelAllClients(
+    public Page<ClientResponse> gelAllClients(
             @RequestParam(value = "page", defaultValue = "0") Integer page,
             @RequestParam(value = "linesPerPage", defaultValue = "12") Integer linesPerPage,
             @RequestParam(value = "direction", defaultValue = "ASC") String direction,
